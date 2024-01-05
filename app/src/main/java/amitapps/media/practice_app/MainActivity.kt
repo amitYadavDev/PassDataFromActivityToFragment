@@ -12,11 +12,10 @@ class MainActivity : AppCompatActivity() {
         val mEditText = findViewById<EditText>(R.id.editText)
         val mButton = findViewById<Button>(R.id.button)
 
-        val mFragmentManager = supportFragmentManager
-        val mFragmentTransaction = mFragmentManager.beginTransaction()
-        val mFragment = BlankFragment()
-
         mButton.setOnClickListener {
+            val mFragmentManager = supportFragmentManager
+            val mFragmentTransaction = mFragmentManager.beginTransaction()
+            val mFragment = BlankFragment()
             val mBundle = Bundle()
             mBundle.putString("mText",mEditText.text.toString())
             mFragment.arguments = mBundle
